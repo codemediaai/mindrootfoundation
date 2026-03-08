@@ -23,13 +23,12 @@ const phases = [
 ];
 
 const CTASection = () => (
-  <section id="collaborate" className="py-32 md:py-48 px-6 bg-secondary">
+  <section id="collaborate" className="py-32 md:py-48 px-6 bg-secondary transition-colors duration-500">
     <div className="max-w-4xl mx-auto">
-      {/* Roadmap */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: 40, clipPath: "inset(10% 0% 10% 0%)" }}
+        whileInView={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
+        transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         viewport={{ once: true, margin: "-100px" }}
         className="mb-20"
       >
@@ -48,9 +47,9 @@ const CTASection = () => (
         {phases.map((phase, i) => (
           <motion.div
             key={phase.num}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
+            initial={{ opacity: 0, x: -30, clipPath: "inset(0% 100% 0% 0%)" }}
+            whileInView={{ opacity: 1, x: 0, clipPath: "inset(0% 0% 0% 0%)" }}
+            transition={{ duration: 0.8, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
             viewport={{ once: true }}
             className="border-t border-border pt-8 flex flex-col md:flex-row md:gap-16"
           >
@@ -76,11 +75,10 @@ const CTASection = () => (
         ))}
       </div>
 
-      {/* Get Involved */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: 40, scale: 0.98 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         viewport={{ once: true, margin: "-100px" }}
         className="text-center"
       >

@@ -51,14 +51,19 @@ const programs = [
   "Capture Kits + Rituals — simple repeatable practices for families",
 ];
 
+const unfold = {
+  hidden: { opacity: 0, y: 30, clipPath: "inset(5% 0% 5% 0%)" },
+  visible: { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" },
+};
+
 const CharterSection = () => (
-  <section className="py-32 md:py-48 px-6">
+  <section className="py-32 md:py-48 px-6 transition-colors duration-500">
     <div className="max-w-4xl mx-auto">
-      {/* Header */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        variants={unfold}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         viewport={{ once: true, margin: "-100px" }}
         className="mb-6"
       >
@@ -69,31 +74,34 @@ const CharterSection = () => (
           The document that holds us accountable.
         </h2>
         <p className="font-body text-base text-muted-foreground font-light leading-relaxed max-w-2xl">
-          This charter defines what Mindroot Foundation is, how it operates, and what it will refuse to do. 
+          This charter defines what Mindroot Foundation is, how it operates, and what it will refuse to do.
           Changes require documentation, board approval, and a public changelog. No quiet mutations.
         </p>
       </motion.div>
 
-      {/* Stats */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         className="flex gap-12 mb-24 pt-8 border-t border-border"
       >
-        <div>
-          <span className="font-body text-2xl text-foreground">12</span>
-          <p className="font-body text-xs text-muted-foreground mt-1">sections</p>
-        </div>
-        <div>
-          <span className="font-body text-2xl text-foreground">1</span>
-          <p className="font-body text-xs text-muted-foreground mt-1">tie-breaker</p>
-        </div>
-        <div>
-          <span className="font-body text-2xl text-foreground">No</span>
-          <p className="font-body text-xs text-muted-foreground mt-1">exceptions</p>
-        </div>
+        {[
+          { val: "12", label: "sections" },
+          { val: "1", label: "tie-breaker" },
+          { val: "No", label: "exceptions" },
+        ].map((s, i) => (
+          <motion.div
+            key={s.label}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <span className="font-body text-2xl text-foreground">{s.val}</span>
+            <p className="font-body text-xs text-muted-foreground mt-1">{s.label}</p>
+          </motion.div>
+        ))}
       </motion.div>
 
       {/* Core Sections 00–03 */}
@@ -101,9 +109,10 @@ const CharterSection = () => (
         {charterSections.map((s, i) => (
           <motion.div
             key={s.num}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.05 }}
+            variants={unfold}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: i * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
             viewport={{ once: true, margin: "-50px" }}
             className="border-t border-border pt-8"
           >
@@ -118,9 +127,10 @@ const CharterSection = () => (
 
       {/* Values (04) */}
       <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        variants={unfold}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8 }}
         viewport={{ once: true, margin: "-50px" }}
         className="mb-28"
       >
@@ -129,20 +139,28 @@ const CharterSection = () => (
           <h3 className="font-display text-xl md:text-2xl text-foreground mt-2">The non-negotiables.</h3>
         </div>
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-          {values.map((v) => (
-            <div key={v.title} className="py-3">
+          {values.map((v, i) => (
+            <motion.div
+              key={v.title}
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.06 }}
+              viewport={{ once: true }}
+              className="py-3"
+            >
               <p className="font-body text-sm text-foreground font-medium">{v.title}</p>
               <p className="font-body text-sm text-muted-foreground font-light">{v.text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </motion.div>
 
       {/* How We Operate (05) */}
       <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        variants={unfold}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8 }}
         viewport={{ once: true, margin: "-50px" }}
         className="mb-28"
       >
@@ -151,23 +169,31 @@ const CharterSection = () => (
           <h3 className="font-display text-xl md:text-2xl text-foreground mt-2">Rules of the road.</h3>
         </div>
         <div className="space-y-5">
-          {operations.map((o) => (
-            <div key={o.title} className="flex gap-4">
+          {operations.map((o, i) => (
+            <motion.div
+              key={o.title}
+              initial={{ opacity: 0, x: -15 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              viewport={{ once: true }}
+              className="flex gap-4"
+            >
               <span className="text-muted-foreground mt-0.5 shrink-0">→</span>
               <div>
                 <p className="font-body text-sm text-foreground font-medium">{o.title}</p>
                 <p className="font-body text-sm text-muted-foreground font-light">{o.text}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </motion.div>
 
       {/* Programs (06) */}
       <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        variants={unfold}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8 }}
         viewport={{ once: true, margin: "-50px" }}
         className="mb-28"
       >
@@ -176,10 +202,17 @@ const CharterSection = () => (
           <h3 className="font-display text-xl md:text-2xl text-foreground mt-2">What we actually do.</h3>
         </div>
         <div className="space-y-3">
-          {programs.map((p) => (
-            <p key={p} className="font-body text-sm text-muted-foreground font-light leading-relaxed">
+          {programs.map((p, i) => (
+            <motion.p
+              key={p}
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
+              viewport={{ once: true }}
+              className="font-body text-sm text-muted-foreground font-light leading-relaxed"
+            >
               <span className="text-foreground">•</span> {p}
-            </p>
+            </motion.p>
           ))}
         </div>
       </motion.div>
@@ -192,12 +225,13 @@ const CharterSection = () => (
           { num: "09", title: "IP + Open Source", subtitle: "Durability requires shared standards.", text: "We publish schemas, education, and software openly whenever feasible. If any paid licensing ever exists to fund sustainability, the boundary must be explicit — and user ownership stays untouched." },
           { num: "10", title: "Funding Ethics", subtitle: "Yes and no.", text: "Yes to donations, grants, mission-aligned partnerships, earned revenue from training and services. No to money that requires surveillance, data capture arrangements, exclusivity that harms interoperability, or anything that causes mission drift." },
           { num: "11", title: "Transparency", subtitle: "No quiet mutations.", text: "We publish what we build, what we collect, what we refuse to collect — and how decisions get made. Charter changes get logged. Change is allowed — but only with documentation, board approval, and a public changelog." },
-        ].map((s) => (
+        ].map((s, i) => (
           <motion.div
             key={s.num}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            variants={unfold}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: i * 0.05 }}
             viewport={{ once: true, margin: "-50px" }}
             className="border-t border-border pt-8"
           >
@@ -211,9 +245,9 @@ const CharterSection = () => (
 
       {/* Tie-breaker */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         viewport={{ once: true }}
         className="border-t border-foreground pt-10 text-center"
       >
