@@ -22,7 +22,7 @@ const PrinciplesSection = () => (
         <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">
           Foundation Charter
         </p>
-        <h2 className="font-display text-3xl md:text-5xl text-foreground italic">
+        <h2 className="font-display text-3xl md:text-5xl text-foreground font-light">
           Six principles for the future of memory.
         </h2>
       </motion.div>
