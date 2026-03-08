@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 const principles = [
-  { title: "Stewardship", text: "We hold memory in trust, never as property." },
-  { title: "Continuity", text: "Every system we build must outlast the generation that created it." },
-  { title: "Dignity", text: "Personal archives deserve the same care as cultural heritage." },
-  { title: "Openness", text: "Our standards, formats, and protocols remain open and interoperable." },
-  { title: "Long-term Preservation", text: "We design for centuries, not product cycles." },
-  { title: "Non-extractive Design", text: "Memory is never mined, monetized, or surveilled." },
+  { title: "Local Ownership", text: "Your archive lives on hardware you control. No account required to read your own memory." },
+  { title: "Open Formats", text: "Plain text, JSON, YAML, markdown. Readable in 40 years without this software." },
+  { title: "Integrity by Design", text: "Every record is checksummed. Every change is logged. Nothing silently disappears." },
+  { title: "Composable Structure", text: "Canonical folder layout. Human-readable schema. Works with git, rsync, any backup tool." },
+  { title: "Community Legibility", text: "Archives should be understandable by a family member, not just the archivist." },
+  { title: "No Lock-in", text: "Import from anywhere, export to anywhere. We succeed when you don't need us." },
 ];
 
 const PrinciplesSection = () => (
@@ -23,7 +23,7 @@ const PrinciplesSection = () => (
           Foundation Charter
         </p>
         <h2 className="font-display text-3xl md:text-5xl text-foreground font-light">
-          Six principles for the future of memory.
+          Six commitments. No exceptions.
         </h2>
       </motion.div>
 
