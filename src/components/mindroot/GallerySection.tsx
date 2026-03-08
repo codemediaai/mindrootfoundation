@@ -29,7 +29,7 @@ const GallerySection = () => {
   ];
 
   return (
-    <section className="py-32 md:py-48 px-6 bg-foreground transition-colors duration-500">
+    <section className="py-32 md:py-48 px-6 bg-surface-inverted transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
