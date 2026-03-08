@@ -41,6 +41,8 @@
     --silver: 0 0% 72%;
     --soft-white: 0 0% 96%;
     --charcoal: 0 0% 12%;
+    --surface-inverted: 0 0% 8%;
+    --surface-inverted-foreground: 0 0% 96%;
 
     --font-display: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
     --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
