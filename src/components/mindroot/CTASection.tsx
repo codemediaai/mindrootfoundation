@@ -98,7 +98,9 @@ const CTASection = () => {
             Get in Touch
           </p>
           <h2 className="font-display text-2xl md:text-3xl text-foreground mb-8 font-light text-center">
-            Interested in the mission? Let's talk.
+            Interested in the mission?
+            <br />
+            Let's talk.
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
