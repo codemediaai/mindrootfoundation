@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import crystalHero from "@/assets/crystal-hero.jpg";
-import explodedView from "@/assets/exploded-view.jpg";
-import systemStack from "@/assets/system-stack.jpg";
+import heroImg from "@/assets/mindroot-hero.png";
+import explodedImg from "@/assets/mindroot-exploded.png";
+import systemImg from "@/assets/mindroot-system.png";
 
 const items = [
-  { src: crystalHero, alt: "Quartz Lineage Crystal", label: "The Crystal" },
-  { src: explodedView, alt: "Exploded view of the archival artifact", label: "Exploded View" },
-  { src: systemStack, alt: "Archive Root system stack", label: "The System Stack" },
+  { src: heroImg, alt: "Quartz Archive Crystal on aluminum base", label: "The Crystal" },
+  { src: explodedImg, alt: "Exploded view — crystal, base seat, root node, storage core", label: "Exploded View" },
+  { src: systemImg, alt: "Generational Memory Archive System overview", label: "The System" },
 ];
 
 const GallerySection = () => (
@@ -37,11 +37,11 @@ const GallerySection = () => (
             viewport={{ once: true }}
             className="group"
           >
-            <div className="aspect-square overflow-hidden bg-charcoal mb-4">
+            <div className="aspect-[3/4] overflow-hidden bg-soft-white mb-4 flex items-center justify-center p-4">
               <img
                 src={item.src}
                 alt={item.alt}
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-500"
               />
             </div>
             <p className="font-body text-xs tracking-[0.2em] uppercase text-silver">
