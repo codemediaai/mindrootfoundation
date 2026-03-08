@@ -6,7 +6,7 @@ const FooterSection = () => (
           <h3 className="font-display text-2xl text-foreground mb-4">
             Mindroot Foundation
           </h3>
-          <p className="font-body text-sm text-muted-foreground font-light leading-relaxed italic">
+          <p className="font-body text-sm text-muted-foreground font-light leading-relaxed">
             "The measure of a civilization is not what it builds, but what it
             remembers. We exist to ensure that the most intimate records of human
             life — the ones held by families — are never lost to indifference,

@@ -40,7 +40,7 @@ const VisionSection = () => (
         <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">
           The Vision
         </p>
-        <h2 className="font-display text-3xl md:text-5xl text-foreground mb-6 italic">
+        <h2 className="font-display text-3xl md:text-5xl text-foreground mb-6 font-light">
           Memory as artifact, not storage.
         </h2>
         <p className="font-body text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mb-20">

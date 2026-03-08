@@ -13,7 +13,7 @@ const CTASection = () => (
         <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">
           Join the Foundation
         </p>
-        <h2 className="font-display text-3xl md:text-5xl text-foreground mb-8 italic">
+        <h2 className="font-display text-3xl md:text-5xl text-foreground mb-8 font-light">
           Help shape the future of human memory.
         </h2>
         <p className="font-body text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-12 max-w-xl mx-auto">

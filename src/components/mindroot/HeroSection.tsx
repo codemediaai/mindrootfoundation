@@ -10,7 +10,7 @@ const HeroSection = () => {
         transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
         className="max-w-3xl text-center pt-24"
       >
-        <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8">
+        <p className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-12">
           Mindroot Foundation
         </p>
         <img

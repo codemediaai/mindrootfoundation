@@ -12,7 +12,7 @@ const AboutSection = () => (
         <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">
           About the Foundation
         </p>
-        <h2 className="font-display text-3xl md:text-5xl text-foreground mb-10 italic">
+        <h2 className="font-display text-3xl md:text-5xl text-foreground mb-10 font-light">
           Memory has intrinsic value.
         </h2>
         <div className="space-y-6 font-body text-base md:text-lg text-muted-foreground font-light leading-relaxed">

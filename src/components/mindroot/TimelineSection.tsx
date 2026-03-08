@@ -32,7 +32,7 @@ const TimelineSection = () => (
         <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">
           The Process
         </p>
-        <h2 className="font-display text-3xl md:text-5xl text-foreground italic">
+        <h2 className="font-display text-3xl md:text-5xl text-foreground font-light">
           From capture to continuity.
         </h2>
       </motion.div>
