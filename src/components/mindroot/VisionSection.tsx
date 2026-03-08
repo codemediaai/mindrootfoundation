@@ -41,13 +41,12 @@ const visionPoints = [
 ];
 
 const VisionSection = () => (
-  <section id="vision" className="py-32 md:py-48 px-6">
+  <section id="vision" className="py-32 md:py-48 px-6 transition-colors duration-500">
     <div className="max-w-4xl mx-auto">
-      {/* Vision */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: 40, clipPath: "inset(10% 0% 10% 0%)" }}
+        whileInView={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
+        transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         viewport={{ once: true, margin: "-100px" }}
       >
         <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">
@@ -57,20 +56,26 @@ const VisionSection = () => (
           A future where memory is yours — permanently.
         </h2>
         <div className="space-y-3 mb-24">
-          {visionPoints.map((point) => (
-            <div key={point} className="flex gap-3">
+          {visionPoints.map((point, i) => (
+            <motion.div
+              key={point}
+              initial={{ opacity: 0, x: -15 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              viewport={{ once: true }}
+              className="flex gap-3"
+            >
               <span className="text-muted-foreground shrink-0 mt-0.5">—</span>
               <p className="font-body text-sm md:text-base text-muted-foreground font-light leading-relaxed">
                 {point}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </motion.div>
 
-      {/* Initiatives */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -92,11 +97,11 @@ const VisionSection = () => (
         {initiatives.map((item, i) => (
           <motion.div
             key={item.num}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
+            initial={{ opacity: 0, y: 40, scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.7, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
             viewport={{ once: true, margin: "-50px" }}
-            className="bg-background p-8 md:p-10"
+            className="bg-background p-8 md:p-10 transition-colors duration-500"
           >
             <div className="flex items-baseline gap-3 mb-2">
               <span className="font-body text-xs text-muted-foreground tracking-widest">

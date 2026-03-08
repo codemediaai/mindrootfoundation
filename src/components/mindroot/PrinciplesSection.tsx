@@ -10,12 +10,12 @@ const principles = [
 ];
 
 const PrinciplesSection = () => (
-  <section className="py-32 md:py-48 px-6">
+  <section className="py-32 md:py-48 px-6 transition-colors duration-500">
     <div className="max-w-4xl mx-auto">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: 40, clipPath: "inset(10% 0% 10% 0%)" }}
+        whileInView={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
+        transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         viewport={{ once: true, margin: "-100px" }}
         className="mb-20"
       >
@@ -31,11 +31,11 @@ const PrinciplesSection = () => (
         {principles.map((p, i) => (
           <motion.div
             key={p.title}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: i * 0.08 }}
+            initial={{ opacity: 0, y: 30, scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.7, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
             viewport={{ once: true }}
-            className="bg-background p-8 md:p-10"
+            className="bg-background p-8 md:p-10 transition-colors duration-500"
           >
             <span className="font-body text-xs text-muted-foreground tracking-widest uppercase">
               {String(i + 1).padStart(2, "0")}

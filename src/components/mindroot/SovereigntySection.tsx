@@ -28,12 +28,12 @@ const tags = [
 ];
 
 const SovereigntySection = () => (
-  <section id="principles" className="py-32 md:py-48 px-6 bg-secondary">
+  <section id="principles" className="py-32 md:py-48 px-6 bg-secondary transition-colors duration-500">
     <div className="max-w-4xl mx-auto">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: 40, clipPath: "inset(10% 0% 10% 0%)" }}
+        whileInView={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
+        transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         viewport={{ once: true, margin: "-100px" }}
       >
         <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">
@@ -44,14 +44,13 @@ const SovereigntySection = () => (
         </h2>
       </motion.div>
 
-      {/* Three pillars */}
       <div className="space-y-12 mt-16 mb-20">
         {mainPrinciples.map((p, i) => (
           <motion.div
             key={p.numeral}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
+            initial={{ opacity: 0, y: 30, clipPath: "inset(5% 0% 5% 0%)" }}
+            whileInView={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
+            transition={{ duration: 0.8, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
             viewport={{ once: true, margin: "-50px" }}
             className="border-t border-border pt-8"
           >
@@ -66,21 +65,24 @@ const SovereigntySection = () => (
         ))}
       </div>
 
-      {/* Principle tags */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         className="flex flex-wrap gap-3"
       >
-        {tags.map((tag) => (
-          <span
+        {tags.map((tag, i) => (
+          <motion.span
             key={tag}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: i * 0.06 }}
+            viewport={{ once: true }}
             className="font-body text-xs tracking-[0.1em] px-4 py-2 border border-border text-muted-foreground"
           >
             {tag}
-          </span>
+          </motion.span>
         ))}
       </motion.div>
     </div>
