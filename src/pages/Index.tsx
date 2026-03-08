@@ -3,7 +3,7 @@ import AboutSection from "@/components/mindroot/AboutSection";
 import ProblemSection from "@/components/mindroot/ProblemSection";
 import VisionSection from "@/components/mindroot/VisionSection";
 import SovereigntySection from "@/components/mindroot/SovereigntySection";
-import PrinciplesSection from "@/components/mindroot/PrinciplesSection";
+import CharterSection from "@/components/mindroot/CharterSection";
 import GallerySection from "@/components/mindroot/GallerySection";
 import TimelineSection from "@/components/mindroot/TimelineSection";
 import CTASection from "@/components/mindroot/CTASection";
@@ -16,7 +16,7 @@ const Index = () => (
     <ProblemSection />
     <VisionSection />
     <SovereigntySection />
-    <PrinciplesSection />
+    <CharterSection />
     <GallerySection />
     <TimelineSection />
     <CTASection />
