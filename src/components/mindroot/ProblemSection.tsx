@@ -18,7 +18,7 @@ const ProblemSection = () => {
           <p className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-6">
             The Problem
           </p>
-          <h2 className="font-display text-3xl md:text-5xl text-primary-foreground mb-10 font-light">
+          <h2 className="font-display text-3xl md:text-5xl text-surface-inverted-foreground mb-10 font-light">
             Memory lives on borrowed time.
           </h2>
           <div className="space-y-6 font-body text-base md:text-lg text-silver font-light leading-relaxed">

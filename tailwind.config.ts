@@ -55,6 +55,8 @@ export default {
         silver: "hsl(var(--silver))",
         "soft-white": "hsl(var(--soft-white))",
         charcoal: "hsl(var(--charcoal))",
+        "surface-inverted": "hsl(var(--surface-inverted))",
+        "surface-inverted-foreground": "hsl(var(--surface-inverted-foreground))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

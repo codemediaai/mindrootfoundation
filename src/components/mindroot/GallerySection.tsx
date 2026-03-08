@@ -41,7 +41,7 @@ const GallerySection = () => {
           <p className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-6">
             Product Concepts
           </p>
-          <h2 className="font-display text-3xl md:text-5xl text-primary-foreground font-light">
+          <h2 className="font-display text-3xl md:text-5xl text-surface-inverted-foreground font-light">
             Designed to endure.
           </h2>
         </motion.div>
