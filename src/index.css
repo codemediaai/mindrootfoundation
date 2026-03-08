@@ -42,8 +42,8 @@
     --soft-white: 0 0% 96%;
     --charcoal: 0 0% 12%;
 
-    --font-display: 'Instrument Serif', Georgia, serif;
-    --font-body: 'Inter', -apple-system, sans-serif;
+    --font-display: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 20%;
