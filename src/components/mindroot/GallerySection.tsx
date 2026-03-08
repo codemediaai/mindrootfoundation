@@ -29,7 +29,7 @@ const GallerySection = () => {
   ];
 
   return (
-    <section className="py-32 md:py-48 px-6 bg-foreground transition-colors duration-500">
+    <section className="py-32 md:py-48 px-6 bg-surface-inverted transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -41,7 +41,7 @@ const GallerySection = () => {
           <p className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-6">
             Product Concepts
           </p>
-          <h2 className="font-display text-3xl md:text-5xl text-primary-foreground font-light">
+          <h2 className="font-display text-3xl md:text-5xl text-surface-inverted-foreground font-light">
             Designed to endure.
           </h2>
         </motion.div>

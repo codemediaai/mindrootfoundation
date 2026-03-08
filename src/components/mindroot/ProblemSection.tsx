@@ -7,7 +7,7 @@ const ProblemSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.3, 1, 1, 0.3]);
 
   return (
-    <section ref={ref} className="py-32 md:py-48 px-6 bg-foreground transition-colors duration-500">
+    <section ref={ref} className="py-32 md:py-48 px-6 bg-surface-inverted transition-colors duration-500">
       <motion.div className="max-w-3xl mx-auto" style={{ opacity }}>
         <motion.div
           initial={{ opacity: 0, y: 50, clipPath: "inset(15% 0% 15% 0%)" }}
@@ -18,7 +18,7 @@ const ProblemSection = () => {
           <p className="font-body text-xs tracking-[0.3em] uppercase text-silver mb-6">
             The Problem
           </p>
-          <h2 className="font-display text-3xl md:text-5xl text-primary-foreground mb-10 font-light">
+          <h2 className="font-display text-3xl md:text-5xl text-surface-inverted-foreground mb-10 font-light">
             Memory lives on borrowed time.
           </h2>
           <div className="space-y-6 font-body text-base md:text-lg text-silver font-light leading-relaxed">
