@@ -7,7 +7,7 @@ const ProblemSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.3, 1, 1, 0.3]);
 
   return (
-    <section ref={ref} className="py-32 md:py-48 px-6 bg-foreground transition-colors duration-500">
+    <section ref={ref} className="py-32 md:py-48 px-6 bg-surface-inverted transition-colors duration-500">
       <motion.div className="max-w-3xl mx-auto" style={{ opacity }}>
         <motion.div
           initial={{ opacity: 0, y: 50, clipPath: "inset(15% 0% 15% 0%)" }}
