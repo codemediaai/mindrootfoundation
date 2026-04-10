@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 90%;
+    --accent-foreground: 0 0% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 8%;
+
+    --radius: 0px;
+
+    /* Custom tokens */
+    --graphite: 0 0% 20%;
+    --silver: 0 0% 72%;
+    --soft-white: 0 0% 96%;
+    --charcoal: 0 0% 12%;
+    --surface-inverted: 0 0% 8%;
+    --surface-inverted-foreground: 0 0% 96%;
+
+    --font-display: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 0 0% 8%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 93%;
+    --sidebar-accent-foreground: 0 0% 12%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 0 0% 8%;
+  }
+
+  .dark {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 88%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 88%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 88%;
+
+    --primary: 0 0% 88%;
+    --primary-foreground: 0 0% 2%;
+
+    --secondary: 0 0% 6%;
+    --secondary-foreground: 0 0% 65%;
+
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 82%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 65%;
+
+    --graphite: 0 0% 65%;
+    --silver: 0 0% 45%;
+    --soft-white: 0 0% 6%;
+    --charcoal: 0 0% 82%;
+    --surface-inverted: 0 0% 5%;
+    --surface-inverted-foreground: 0 0% 82%;
+
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 65%;
+    --sidebar-primary: 0 0% 88%;
+    --sidebar-primary-foreground: 0 0% 2%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 0 0% 82%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 0 0% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
